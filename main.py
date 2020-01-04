@@ -56,8 +56,8 @@ def main():
                     for commit in commits:
                         email = commit['author']['email']
                         if email not in VALID_EMAILS:
-                            VALID_EMAILS = email
-
+                            VALID_EMAILS.append(email)
+                
         print(' [+] Email found: ' + VALID_EMAILS + '\n')
     else:
         print(" Email: " + json_initial['email'])
